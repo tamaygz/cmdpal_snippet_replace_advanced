@@ -139,10 +139,8 @@ public sealed partial class VariableExpansionService
     {
         try
         {
-            // Use Windows.ApplicationModel.DataTransfer.Clipboard for WinRT
-            // For now, return placeholder - actual implementation would use Windows APIs
-            await Task.CompletedTask;
-            return "[Clipboard content]";
+            var text = await WindowsIntegrationService.GetClipboardTextAsync();
+            return text ?? string.Empty;
         }
         catch
         {
@@ -157,9 +155,8 @@ public sealed partial class VariableExpansionService
     {
         try
         {
-            // Would use Windows APIs to get selected text
-            await Task.CompletedTask;
-            return "[Selected text]";
+            var text = await WindowsIntegrationService.GetSelectedTextAsync();
+            return text ?? string.Empty;
         }
         catch
         {

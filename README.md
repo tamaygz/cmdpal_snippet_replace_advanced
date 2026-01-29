@@ -10,6 +10,14 @@ A powerful snippet management extension for PowerToys Command Palette that bring
 - **Search & Browse**: Find snippets across all collections with powerful search
 - **Usage Tracking**: Monitor snippet usage statistics and most-used snippets
 
+### Auto-Expansion ⚡
+- **System-Wide**: Automatically expands snippets as you type in ANY Windows application
+- **Keyboard Hook**: Low-level Windows keyboard hook captures keystrokes
+- **Smart Triggers**: Configurable delay (default 300ms) to prevent accidental expansions
+- **Secure Fields**: Optional (disabled by default) - skip password fields
+- **Per-Collection**: Enable/disable auto-expansion for each collection independently
+- **Real-Time**: Instant replacement using Windows SendInput API
+
 ### Dynamic Variables
 Support for powerful variable expansion in snippets:
 - **Date/Time**: `{date}`, `{time}`, `{datetime}`, `{year}`, `{month}`, `{day}`
@@ -40,15 +48,38 @@ Support for powerful variable expansion in snippets:
 3. Install the MSIX package
 4. Open PowerToys Command Palette (Ctrl+K by default)
 5. Type "Snippets" to access the extension
+6. **Enable Auto-Expansion**: Go to "Auto-Expansion Settings" and enable the feature
+
+**Note:** Auto-expansion requires Windows accessibility permissions to monitor keystrokes system-wide.
 
 ## Usage
 
-### Quick Start
+### Quick Start - Manual Expansion
 
 1. **Access Snippets**: Open Command Palette (Ctrl+K) and type "Snippets"
 2. **Browse Collections**: Select a collection to see its snippets
 3. **Expand Snippet**: Click on a snippet to expand it and copy to clipboard
 4. **Search**: Use "Search Snippets" to find snippets across all collections
+
+### Auto-Expansion (Recommended)
+
+1. **Enable**: Open Command Palette → "Auto-Expansion Settings" → "Enable Auto-Expansion"
+2. **Type Naturally**: Just type your snippet keywords in any application
+3. **Automatic Replacement**: After 300ms, the keyword is replaced with the expanded text
+4. **Works Everywhere**: VS Code, browsers, Notepad, Word, etc.
+
+**Example:**
+- Type `myemail` → Automatically replaced with `user@example.com`
+- Type `today` → Automatically replaced with `2026-01-29`
+- Type `greet` → Prompts for name, then expands to greeting
+
+### Configuration
+
+Access "Auto-Expansion Settings" to configure:
+- **Enable/Disable**: Turn auto-expansion on/off
+- **Trigger Delay**: Adjust timing (200-1000ms recommended)
+- **Secure Fields**: Enable/disable in password fields (disabled by default)
+- **Active Snippets**: View which snippets are available for auto-expansion
 
 ### Creating Snippets
 
@@ -134,6 +165,10 @@ You can directly edit this file or use the Import/Export features for backup.
 
 - **.NET 9.0** with Windows SDK
 - **PowerToys Command Palette SDK** for extension integration
+- **Windows P/Invoke APIs** for keyboard hooks and input simulation
+  - SetWindowsHookEx (WH_KEYBOARD_LL) for low-level keyboard monitoring
+  - SendInput for reliable text insertion
+  - User32.dll for clipboard and window management
 - **JSON** for data storage
 - **Regex** for variable parsing and pattern matching
 
@@ -141,11 +176,12 @@ You can directly edit this file or use the Import/Export features for backup.
 
 Planned features for future versions:
 
-### v1.1 - Enhanced Triggers
-- [ ] Auto-expansion engine (background service)
+### v1.1 - Enhanced Triggers ✅ COMPLETE
+- [x] Auto-expansion engine (background service)
+- [x] System-wide keyboard hook
+- [x] SendInput API integration for direct insertion
 - [ ] Global hotkey support per snippet/collection
-- [ ] Regex trigger patterns
-- [ ] SendKeys API integration for direct insertion
+- [ ] Advanced regex trigger patterns with capture groups
 
 ### v1.2 - Advanced Features
 - [ ] Cloud sync (OneDrive, GitHub)
@@ -204,9 +240,9 @@ cmdpal_snippet_replace_advanced/
 | Clipboard | ✅ Yes | ✅ Yes |
 | Input Prompts | ✅ Yes | ✅ Yes |
 | Environment Vars | ❌ Limited | ✅ Full support |
-| Auto-Expand | ✅ Yes | 🚧 Planned |
+| Auto-Expand | ✅ Yes | ✅ Yes (Windows hooks) |
 | Hotkeys | ✅ Yes | 🚧 Planned |
-| Regex Triggers | ❌ No | 🚧 Planned |
+| Regex Triggers | ❌ No | ✅ Yes |
 | Import/Export | ✅ Yes | ✅ Yes |
 | Statistics | ✅ Yes | ✅ Yes |
 | Cloud Sync | ✅ Yes | 🚧 Planned |

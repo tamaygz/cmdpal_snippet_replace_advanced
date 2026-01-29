@@ -74,19 +74,11 @@ internal sealed class ExpandSnippetCommand : ICommand
     {
         try
         {
-            // Use Windows.ApplicationModel.DataTransfer.Clipboard for WinRT
-            // For now, this is a placeholder - actual implementation would use Windows APIs
-            // In a real implementation on Windows:
-            // var dataPackage = new Windows.ApplicationModel.DataTransfer.DataPackage();
-            // dataPackage.SetText(text);
-            // Windows.ApplicationModel.DataTransfer.Clipboard.SetContent(dataPackage);
-            
-            // Fallback: Just log for now
-            System.Diagnostics.Debug.WriteLine($"Would copy to clipboard: {text}");
+            WindowsIntegrationService.CopyToClipboardAsync(text).GetAwaiter().GetResult();
         }
-        catch
+        catch (Exception ex)
         {
-            // Ignore clipboard errors
+            System.Diagnostics.Debug.WriteLine($"Failed to copy to clipboard: {ex.Message}");
         }
     }
 }

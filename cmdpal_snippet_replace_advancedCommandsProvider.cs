@@ -6,6 +6,7 @@ using Microsoft.CommandPalette.Extensions;
 using Microsoft.CommandPalette.Extensions.Toolkit;
 using cmdpal_snippet_replace_advanced.Pages.Snippets;
 using cmdpal_snippet_replace_advanced.Services;
+using System;
 
 namespace cmdpal_snippet_replace_advanced;
 
@@ -14,6 +15,8 @@ public partial class cmdpal_snippet_replace_advancedCommandsProvider : CommandPr
     private readonly ICommandItem[] _commands;
     private readonly SnippetStorageService _storageService;
     private readonly VariableExpansionService _variableService;
+    private readonly ConfigurationService _configService;
+    private readonly AutoExpansionService _autoExpansionService;
 
     public cmdpal_snippet_replace_advancedCommandsProvider()
     {
@@ -22,6 +25,11 @@ public partial class cmdpal_snippet_replace_advancedCommandsProvider : CommandPr
         
         _storageService = new SnippetStorageService();
         _variableService = new VariableExpansionService();
+        _configService = new ConfigurationService();
+        _autoExpansionService = new AutoExpansionService(_storageService, _variableService);
+        
+        // Initialize auto-expansion if enabled in config
+        InitializeAutoExpansionAsync();
         
         _commands = [
             new CommandItem(new SnippetsMainPage(_storageService, _variableService)) 
@@ -34,10 +42,20 @@ public partial class cmdpal_snippet_replace_advancedCommandsProvider : CommandPr
                 Title = "Search Snippets",
                 Subtitle = "Search all snippets by keyword or content"
             },
+            new CommandItem(new AutoExpansionSettingsPage(_autoExpansionService, _configService)) 
+            { 
+                Title = "Auto-Expansion Settings",
+                Subtitle = "Configure automatic snippet expansion"
+            },
             new CommandItem(new CollectionManagementPage(_storageService)) 
             { 
                 Title = "Manage Collections",
                 Subtitle = "Create and organize snippet collections"
+            },
+            new CommandItem(new SnippetStatisticsPage(_storageService)) 
+            { 
+                Title = "Snippet Statistics",
+                Subtitle = "View usage analytics and insights"
             },
             new CommandItem(new ImportExportPage(_storageService)) 
             { 
@@ -45,6 +63,26 @@ public partial class cmdpal_snippet_replace_advancedCommandsProvider : CommandPr
                 Subtitle = "Backup and restore your snippets"
             }
         ];
+    }
+
+    private async void InitializeAutoExpansionAsync()
+    {
+        try
+        {
+            var config = await _configService.LoadConfigAsync();
+            if (config.AutoExpansion.Enabled)
+            {
+                _autoExpansionService.TriggerDelayMs = config.AutoExpansion.DelayMs;
+                _autoExpansionService.EnableInSecureFields = config.AutoExpansion.EnableInSecureFields;
+                
+                await _autoExpansionService.StartAsync();
+                System.Diagnostics.Debug.WriteLine("Auto-expansion initialized from config");
+            }
+        }
+        catch (Exception ex)
+        {
+            System.Diagnostics.Debug.WriteLine($"Failed to initialize auto-expansion: {ex.Message}");
+        }
     }
 
     public override ICommandItem[] TopLevelCommands()
