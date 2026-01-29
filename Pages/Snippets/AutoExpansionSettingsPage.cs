@@ -137,7 +137,7 @@ internal sealed class AutoExpansionSettingsPage : ListPage
 /// <summary>
 /// Command to toggle auto-expansion on/off
 /// </summary>
-internal sealed class ToggleAutoExpansionCommand : ICommand
+internal sealed class ToggleAutoExpansionCommand : Command
 {
     private readonly AutoExpansionService _autoExpansionService;
     private readonly ConfigurationService _configService;
@@ -150,7 +150,7 @@ internal sealed class ToggleAutoExpansionCommand : ICommand
         _enable = enable;
     }
 
-    public async Task<ICommandResult> ExecuteAsync(ICommandContext context)
+    public override async Task<ICommandResult> ExecuteAsync()
     {
         try
         {

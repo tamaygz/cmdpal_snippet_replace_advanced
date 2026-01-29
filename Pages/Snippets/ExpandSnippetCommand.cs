@@ -3,6 +3,7 @@
 // See the LICENSE file in the project root for more information.
 
 using Microsoft.CommandPalette.Extensions;
+using Microsoft.CommandPalette.Extensions.Toolkit;
 using cmdpal_snippet_replace_advanced.Services;
 using System;
 using System.Threading.Tasks;
@@ -12,7 +13,7 @@ namespace cmdpal_snippet_replace_advanced.Pages.Snippets;
 /// <summary>
 /// Command to expand a snippet and copy to clipboard
 /// </summary>
-internal sealed class ExpandSnippetCommand : ICommand
+internal sealed class ExpandSnippetCommand : Command
 {
     private readonly SnippetStorageService _storageService;
     private readonly VariableExpansionService _variableService;
@@ -25,7 +26,7 @@ internal sealed class ExpandSnippetCommand : ICommand
         _snippetId = snippetId;
     }
 
-    public Task<ICommandResult> ExecuteAsync(ICommandContext context)
+    public override Task<ICommandResult> ExecuteAsync()
     {
         try
         {

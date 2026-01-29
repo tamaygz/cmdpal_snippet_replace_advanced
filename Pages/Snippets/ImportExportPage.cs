@@ -62,7 +62,7 @@ internal sealed class ImportExportPage : ListPage
 /// <summary>
 /// Command to export snippets to JSON
 /// </summary>
-internal sealed class ExportSnippetsCommand : ICommand
+internal sealed class ExportSnippetsCommand : Command
 {
     private readonly SnippetStorageService _storageService;
 
@@ -71,7 +71,7 @@ internal sealed class ExportSnippetsCommand : ICommand
         _storageService = storageService;
     }
 
-    public Task<ICommandResult> ExecuteAsync(ICommandContext context)
+    public override Task<ICommandResult> ExecuteAsync()
     {
         try
         {
