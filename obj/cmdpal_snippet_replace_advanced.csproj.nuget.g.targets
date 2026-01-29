@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.windows.sdk.buildtools.msix\1.0.20241009.2\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.sdk.buildtools.msix\1.0.20241009.2\build\Microsoft.Windows.SDK.BuildTools.MSIX.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.windows.cswinrt\0.1.0\build\Microsoft.Windows.CsWinRT.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.windows.cswinrt\0.1.0\build\Microsoft.Windows.CsWinRT.targets')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.commandpalette.extensions\0.0.5\build\Microsoft.CommandPalette.Extensions.targets" Condition="Exists('$(NuGetPackageRoot)microsoft.commandpalette.extensions\0.0.5\build\Microsoft.CommandPalette.Extensions.targets')" />
+  </ImportGroup>
+</Project>

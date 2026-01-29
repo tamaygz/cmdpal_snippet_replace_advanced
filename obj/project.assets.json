@@ -1,0 +1,373 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0": {
+      "Microsoft.CommandPalette.Extensions/0.0.5": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.CommandPalette.Extensions.props": {},
+          "build/Microsoft.CommandPalette.Extensions.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-arm64/native/Microsoft.CommandPalette.Extensions.dll": {
+            "assetType": "native",
+            "rid": "win-arm64"
+          },
+          "runtimes/win-x64/native/Microsoft.CommandPalette.Extensions.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      },
+      "Microsoft.Windows.CsWinRT/0.1.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      },
+      "Microsoft.Windows.SDK.BuildTools.MSIX/1.0.20241009.2": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.props": {},
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
+        }
+      },
+      "Shmuelie.WinRTServer/1.0.0": {
+        "type": "package"
+      }
+    },
+    ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0/win-arm64": {
+      "Microsoft.CommandPalette.Extensions/0.0.5": {
+        "type": "package",
+        "native": {
+          "runtimes/win-arm64/native/Microsoft.CommandPalette.Extensions.dll": {}
+        },
+        "build": {
+          "build/Microsoft.CommandPalette.Extensions.props": {},
+          "build/Microsoft.CommandPalette.Extensions.targets": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/0.1.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      },
+      "Microsoft.Windows.SDK.BuildTools.MSIX/1.0.20241009.2": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.props": {},
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
+        }
+      },
+      "Shmuelie.WinRTServer/1.0.0": {
+        "type": "package"
+      }
+    },
+    ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0/win-x64": {
+      "Microsoft.CommandPalette.Extensions/0.0.5": {
+        "type": "package",
+        "native": {
+          "runtimes/win-x64/native/Microsoft.CommandPalette.Extensions.dll": {}
+        },
+        "build": {
+          "build/Microsoft.CommandPalette.Extensions.props": {},
+          "build/Microsoft.CommandPalette.Extensions.targets": {}
+        }
+      },
+      "Microsoft.Windows.CsWinRT/0.1.0": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.CsWinRT.props": {},
+          "build/Microsoft.Windows.CsWinRT.targets": {}
+        }
+      },
+      "Microsoft.Windows.SDK.BuildTools.MSIX/1.0.20241009.2": {
+        "type": "package",
+        "build": {
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.props": {},
+          "build/Microsoft.Windows.SDK.BuildTools.MSIX.targets": {}
+        }
+      },
+      "Shmuelie.WinRTServer/1.0.0": {
+        "type": "package"
+      }
+    }
+  },
+  "libraries": {
+    "Microsoft.CommandPalette.Extensions/0.0.5": {
+      "sha512": "S+bEw3vosHE+UEkMLc0wriBtjHfqh/mKLFwkxNTU+s7TiFlyYkquM0Rot23wMgvWoJwDaX1G5Ec0hDA+0UAEJQ==",
+      "type": "package",
+      "path": "microsoft.commandpalette.extensions/0.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/Microsoft.CommandPalette.Extensions.props",
+        "build/Microsoft.CommandPalette.Extensions.targets",
+        "docs/README.md",
+        "lib/net8.0-windows10.0.19041.0/Microsoft.CommandPalette.Extensions.Toolkit.deps.json",
+        "lib/net8.0-windows10.0.19041.0/Microsoft.CommandPalette.Extensions.Toolkit.dll",
+        "microsoft.commandpalette.extensions.0.0.5.nupkg.sha512",
+        "microsoft.commandpalette.extensions.nuspec",
+        "runtimes/win-arm64/native/Microsoft.CommandPalette.Extensions.dll",
+        "runtimes/win-x64/native/Microsoft.CommandPalette.Extensions.dll",
+        "winmd/Microsoft.CommandPalette.Extensions.winmd"
+      ]
+    },
+    "Microsoft.Windows.CsWinRT/0.1.0": {
+      "sha512": "0APFqK2OrEiGnZB48IA+Xg6ymTjuEAiu60twpoRLK261kh/K9QN5me+TBZVz4ASXTxPm4ENLff6PAZn84AdNFQ==",
+      "type": "package",
+      "path": "microsoft.windows.cswinrt/0.1.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/cs/WinRT.SourceGenerator.dll",
+        "build/Microsoft.Windows.CsWinRT.props",
+        "build/Microsoft.Windows.CsWinRT.targets",
+        "cswinrt.exe",
+        "lib/net5.0/WinRT.Runtime.dll",
+        "microsoft.windows.cswinrt.0.1.0.nupkg.sha512",
+        "microsoft.windows.cswinrt.nuspec",
+        "readme.txt"
+      ]
+    },
+    "Microsoft.Windows.SDK.BuildTools.MSIX/1.0.20241009.2": {
+      "sha512": "UyWahH1u8LOmiD02lbxEVJe+PCTk9t+Z0C5bgkSuZokRzBoF2UCE/PCKVwl6OfwE3luTRCaU2TzjBVH4Ed5nhw==",
+      "type": "package",
+      "path": "microsoft.windows.sdk.buildtools.msix/1.0.20241009.2",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CodeSignSummary-6c11e67c-9f61-4899-9072-55a99e166fdf.md",
+        "CodeSignSummary-9ad46ad9-683c-47cc-88c4-287838a1cfd7.md",
+        "build/AppDevPackageScripts/Add-AppDevPackage.ps1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/cs-CZ/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/de-DE/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/en-US/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/es-ES/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/fr-FR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/it-IT/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ja-JP/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ko-KR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pl-PL/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/pt-BR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/ru-RU/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/tr-TR/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-CN/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Add-AppDevPackage.resources/zh-TW/Add-AppDevPackage.psd1",
+        "build/AppDevPackageScripts/Install.ps1",
+        "build/AppDevPackageScripts/LogSideloadingTelemetry.ps1",
+        "build/Landing/extras/br.png",
+        "build/Landing/extras/br_snippet.png",
+        "build/Landing/image.png",
+        "build/Landing/index.template.html",
+        "build/Landing/logo.png",
+        "build/Landing/style.css",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.BeforeCommon.props",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Common.props",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Common.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Cpp.props",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Cpp.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Cs.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.DesignTime.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Packaging.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.Pri.targets",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.props",
+        "build/Microsoft.Windows.SDK.BuildTools.MSIX.targets",
+        "build/Rules/MsixPackageDebugPropertyPage.xaml",
+        "build/Rules/WindowsPackageTypePropertyPage.xaml",
+        "build/Templates/Package.appinstaller",
+        "microsoft.windows.sdk.buildtools.msix.1.0.20241009.2.nupkg.sha512",
+        "microsoft.windows.sdk.buildtools.msix.nuspec",
+        "nuget_icon.png",
+        "sdk_license.txt",
+        "tools/net472/Microsoft.Build.Msix.dll",
+        "tools/net472/Microsoft.Cci.dll",
+        "tools/net472/Microsoft.VisualStudio.RemoteControl.dll",
+        "tools/net472/Microsoft.VisualStudio.Telemetry.dll",
+        "tools/net472/Microsoft.VisualStudio.Utilities.Internal.dll",
+        "tools/net472/Newtonsoft.Json.dll",
+        "tools/net6.0/Microsoft.Build.Msix.dll",
+        "tools/net6.0/Microsoft.Cci.dll",
+        "tools/net6.0/Microsoft.VisualStudio.RemoteControl.dll",
+        "tools/net6.0/Microsoft.VisualStudio.Telemetry.dll",
+        "tools/net6.0/Microsoft.VisualStudio.Utilities.Internal.dll",
+        "tools/net6.0/Newtonsoft.Json.dll"
+      ]
+    },
+    "Shmuelie.WinRTServer/1.0.0": {
+      "sha512": "RkKYl9RGvofMHbFS/ehkAfRngikG44jQ8D/lWAcACit6IX6oVzfl6E3yFAbugtXP3/vquvMKrzLRPzaUlXDXqA==",
+      "type": "package",
+      "path": "shmuelie.winrtserver/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "README.md",
+        "icon.png",
+        "lib/net6.0/Shmuelie.WinRTServer.dll",
+        "lib/net6.0/Shmuelie.WinRTServer.xml",
+        "lib/netstandard2.0/Shmuelie.WinRTServer.dll",
+        "lib/netstandard2.0/Shmuelie.WinRTServer.xml",
+        "shmuelie.winrtserver.1.0.0.nupkg.sha512",
+        "shmuelie.winrtserver.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0": [
+      "Microsoft.CommandPalette.Extensions",
+      "Microsoft.Windows.CsWinRT",
+      "Microsoft.Windows.SDK.BuildTools.MSIX",
+      "Shmuelie.WinRTServer"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Tamay\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Tamay\\vscode\\cmdpal_snippet_replace_advanced\\cmdpal_snippet_replace_advanced\\cmdpal_snippet_replace_advanced.csproj",
+      "projectName": "cmdpal_snippet_replace_advanced",
+      "projectPath": "C:\\Users\\Tamay\\vscode\\cmdpal_snippet_replace_advanced\\cmdpal_snippet_replace_advanced\\cmdpal_snippet_replace_advanced.csproj",
+      "packagesPath": "C:\\Users\\Tamay\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tamay\\vscode\\cmdpal_snippet_replace_advanced\\cmdpal_snippet_replace_advanced\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Tamay\\vscode\\cmdpal_snippet_replace_advanced\\NuGet.Config",
+        "C:\\Users\\Tamay\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net90-windows10.0.26100.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net90-windows10.0.26100.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net90-windows10.0.26100.0": {
+        "dependencies": {
+          "Microsoft.CommandPalette.Extensions": {
+            "target": "Package",
+            "version": "(, )"
+          },
+          "Microsoft.Windows.CsWinRT": {
+            "target": "Package",
+            "version": "(, )"
+          },
+          "Microsoft.Windows.SDK.BuildTools.MSIX": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "(, )"
+          },
+          "Shmuelie.WinRTServer": {
+            "target": "Package",
+            "version": "(, )"
+          }
+        }
+      }
+    },
+    "runtimes": {
+      "win-arm64": {
+        "#import": []
+      },
+      "win-x64": {
+        "#import": []
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Microsoft.CommandPalette.Extensions does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Microsoft.CommandPalette.Extensions",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0"
+      ]
+    },
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Microsoft.Windows.CsWinRT does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Microsoft.Windows.CsWinRT",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0"
+      ]
+    },
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Microsoft.Windows.SDK.BuildTools.MSIX does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Microsoft.Windows.SDK.BuildTools.MSIX",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0"
+      ]
+    },
+    {
+      "code": "NU1604",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Project dependency Shmuelie.WinRTServer does not contain an inclusive lower bound. Include a lower bound in the dependency version to ensure consistent restore results.",
+      "libraryId": "Shmuelie.WinRTServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Shmuelie.WinRTServer 1.0.0 is not compatible with net90-windows10.0.26100.0 (.NETFramework,Version=v9.0,Profile=windows10.0.26100.0). Package Shmuelie.WinRTServer 1.0.0 supports:\r\n  - net60 (.NETFramework,Version=v6.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)",
+      "libraryId": "Shmuelie.WinRTServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Shmuelie.WinRTServer 1.0.0 is not compatible with net90-windows10.0.26100.0 (.NETFramework,Version=v9.0,Profile=windows10.0.26100.0) / win-arm64. Package Shmuelie.WinRTServer 1.0.0 supports:\r\n  - net60 (.NETFramework,Version=v6.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)",
+      "libraryId": "Shmuelie.WinRTServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0/win-arm64"
+      ]
+    },
+    {
+      "code": "NU1202",
+      "level": "Error",
+      "message": "Package Shmuelie.WinRTServer 1.0.0 is not compatible with net90-windows10.0.26100.0 (.NETFramework,Version=v9.0,Profile=windows10.0.26100.0) / win-x64. Package Shmuelie.WinRTServer 1.0.0 supports:\r\n  - net60 (.NETFramework,Version=v6.0)\r\n  - netstandard2.0 (.NETStandard,Version=v2.0)",
+      "libraryId": "Shmuelie.WinRTServer",
+      "targetGraphs": [
+        ".NETFramework,Version=v9.0,Profile=windows10.0.26100.0/win-x64"
+      ]
+    }
+  ]
+}

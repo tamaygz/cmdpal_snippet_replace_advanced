@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "cmdpal_snippet_replace_advanced (Package)": {
+      "commandName": "MsixPackage",
+      "doNotLaunchApp": true
+    },
+    "cmdpal_snippet_replace_advanced (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
